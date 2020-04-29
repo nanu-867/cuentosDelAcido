@@ -1,0 +1,168 @@
+body{
+    background: url(../img/fondo.png) ;
+}
+
+section{
+    position: relative;
+    left: 50%;
+    top: 20px;
+    width: 260px;
+    height: 500px;
+    margin-left: -130px;
+    background: rgba(5, 5, 5, 0.8);
+}
+
+.prince{
+    position: absolute;
+    width: 45px;
+    top: 30px;
+    left: 50px;
+    transform: translate(-40px, -20px);
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 4s;
+}
+
+.princess{
+    position: absolute;
+    width: 45px;
+    top: 28px;
+    left: 170px;
+    transform: translate(-90px, -10px);
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 4s;
+}
+
+.godmother{
+    position: absolute;
+    width: 45px;
+    top: 25px;
+    left: 110px;
+    transform: translate(30px, -10px);
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 4s;
+}
+
+.frog{
+    position: absolute;
+    width: 45px;
+    top: 40px;
+    left: 220px;
+    transform: translate(-20px, -20px);
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 4s;
+}
+
+@keyframes rotInanim{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-45deg);
+    } 
+    75%{
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.rotobj:nth-of-type(8){
+    position: absolute;
+    width: 30px;
+    top: 220px;
+    left: 15px;
+    animation: rotInanim 3s;
+    animation-iteration-count: 2;
+    direction: alternate;
+}
+
+.rotobj:nth-of-type(5){
+    position: absolute;
+    width: 60px;
+    top: 200px;
+    left: 130px;
+    animation: rotInanim 3s;
+    animation-iteration-count: 2;
+    direction: alternate;
+}
+
+.rotobj:nth-of-type(6){
+    position: absolute;
+    width: 50px;
+    top: 220px;
+    left: 200px;
+    animation: rotInanim 2s;
+    animation-iteration-count: 2;
+    direction: alternate;
+}
+
+.rotobj:nth-of-type(7){
+    position: absolute;
+    width: 60px;
+    top: 220px;
+    left: 55px;
+    animation: rotInanim 2s;
+    animation-iteration-count: 2;
+    direction: alternate;
+}
+
+.witch{
+    position: absolute;
+    width: 25px;
+    top: 360px;
+    left: 205px;
+    transform: matrix(2, 0.2, -0.5, 2, 5, 10);
+    /*matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())*/
+}
+
+@keyframes skewitch{
+    50% {
+        transform: skew(20deg, 10deg);
+    } 
+
+    100% {
+        transform: skew(initial);
+    }
+}
+
+.witch:hover{
+    animation: skewitch 2s;
+}
+
+@keyframes scaleDragon{
+    50% {
+        transform: scale(2, 2);
+    } 
+    100% {
+        transform: scale(initial);
+    }
+}
+
+.dragon{
+    position: absolute;
+    width: 80px;
+    top: 340px;
+    left: 95px;
+}
+
+.dragon:hover{
+    animation: scaleDragon 2s;
+}
+
+@keyframes rotGnomo{
+    0% {
+        transform: rotate(0deg);
+    } 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gnomo{
+    position: absolute;
+    width: 50px;
+    top: 350px;
+    left: 5px;
+}
+
+.gnomo:hover{
+    animation: rotGnomo 2s;
+    animation-iteration-count: infinite;
+}
